@@ -1,0 +1,28 @@
+﻿<head>
+    <title>Create Post</title>
+</head>
+
+@model CreatePostViewModel
+<div class="row">
+    <div class="col-12">
+        <div class="bg-white p-4">
+            <h1>Create Post</h1>
+            <form action="CreatePost" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">Kullanıcı Adı</label>
+                    <input asp-for="Name" class="form-control">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label">Description</label>
+                    <input asp-for="Description" class="form-control">
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
